@@ -1,0 +1,27 @@
+{% extends 'user/base.html' %}
+
+{% block title %}login{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputusername" class="form-label">Username</label>
+            <input type="text" class="username" name="username" id="exampleInputusername" aria-describedby="userHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="password" name="password" id="exampleInputPassword1">
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+
+
+{% endblock content %}
