@@ -5,7 +5,9 @@ urlpatterns = [
     path("register/",Register,name="register"),
     path("login/",Login,name="login"),
     path("logout/",Logout,name="Logout"),
-    path("<str:pk>/",Change,name="change"),
+    path("<int:pk>/",Change_Info,name="change_info"),
+    path("<int:pk>/",Change_Password,name="change_password"),
+
 
 
 
