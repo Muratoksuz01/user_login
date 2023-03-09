@@ -26,11 +26,11 @@
                     <div class="row">
                         <div class="col">
                         <label for="firstname" class="form-label">Firstname</label>
-                            <input type="text" class="form-control" name="firstname"value="{{firstname}}"> 
+                            <input type="text" class="form-control" name="firstname"value="{{first_name}}"> 
                         </div>
                         <div class="col">
                             <label for="lastname" class="form-label">Lastname</label>
-                            <input type="text" class="form-control" name="lastname"value="{{lastname}}">
+                            <input type="text" class="form-control" name="lastname"value="{{last_name}}">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="col">
-                <form id="form2" action="{% url 'change_password' request.user.id %}" method="post">
+                <form autocomplete="off" id="form2" action="{% url 'change_password' request.user.id %}" method="post">
                     {% csrf_token %}
                         <div class="md-3">
                             <label for="password" class="form-label">Current Password</label>
