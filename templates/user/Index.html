@@ -3,6 +3,7 @@
 {% block title %}Ana Sayfa{% endblock title %}
 
 {% block content %}
+{% if not request.is_authenticated %}
 <p>{{request.user.first_name}}</p>
 <p>{{request.user.last_name}}</p>
 <p>{{request.user.email}}</p>
@@ -10,7 +11,11 @@
 <p>{{request.user.username}}</p>
 <p>{{request.user.id}}</p>
 
+{% else %}
+<p>Guest User</p>
 
+
+{% endif %}
 
 
 
